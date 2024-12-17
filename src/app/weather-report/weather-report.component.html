@@ -1,0 +1,47 @@
+
+<div [hidden]="showtable" >
+<h1 class="text-center fw-bold text-light">Weather Report in {{WeatherData.CityName}}: </h1>
+
+
+<table class="table table-bordered border-primary">
+
+    <tbody>
+    <tr>
+        <th>Overall Weather </th>
+        <td>{{ WeatherData.Weather }} <img [src]="WeatherData.image"><img></td>
+    </tr>
+    <tr>
+        <th> Weather Description</th>
+        <td>{{ WeatherData.Description }}</td>
+    </tr>
+    <tr>
+        <th>Temperature</th>
+        <td>{{ WeatherData.Temperature }} °C</td>
+    </tr>
+    <tr>
+        <th>Humidity</th>
+        <td>{{ WeatherData.Humidity }} %</td>
+    </tr>
+    <tr>
+        <th>Wind Speed</th>
+        <td>{{ WeatherData.WindSpeed }} m/s</td>
+    </tr>
+    <tr>
+        <th>Wind Direction</th>
+        <td>{{ WeatherData.WindDirection }} °</td>
+    </tr>
+    <tr>
+        <th>Pressure</th>
+        <td>{{ WeatherData.pressure }} hPa</td>
+    </tr>
+    <tr>
+        <th>Sunrise</th>
+        <td>{{ WeatherData.SunRise }}</td>
+    </tr>
+    <tr>
+        <th>Sunset</th>
+        <td>{{ WeatherData.SunSet }}</td>
+    </tr>
+</tbody>
+</table>
+</div>
