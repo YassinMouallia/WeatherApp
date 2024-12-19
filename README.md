@@ -1,6 +1,32 @@
+<!--
+This file contains the README documentation for the WeatherApp project.
+-->
+<!-- All Rights Belongs to Yassin Mouallia-->
 # WeatherApp
+WeatherApp is an Angular web application that uses the latest version of Angular (19.0.4) and Bootstrap (5.3.3).
+This web application's main function is to show the user the user the current weather given the user input(eg : London,Cairo,Tunis...) using the Open Weather API (more information here: https://openweathermap.org/current)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+
+and displays the following information to the User:
+```bash
++ Current Weather
++ Weather Description
++ The Current Temperature
++ Humidity
++ Wind speed
++ Wind direction
++ Pressure
++ The time of sunrise
++ The time of sunset
+```
+
+
+
+
+
+
+
+
 
 ## Development server
 
