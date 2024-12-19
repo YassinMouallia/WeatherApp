@@ -1,6 +1,6 @@
-
-    <div class="col-lg-10 d-flex justify-content-center">
-    <input type="text" class="form-control" placeholder="Enter city name..." [(ngModel)]="cityName" >
-    <button class="btn btn-primary" (click)="SendCityName()"><i class="fa-solid fa-magnifying-glass"></i></button>
-    <span class="text-danger"></span>
-    </div>
+<div class="col-lg-10 d-flex justify-content-center">
+    <input type="text" class="form-control" placeholder="Enter city name..." [(ngModel)]="cityName">
+    <button class="btn btn-primary" (click)="Validation()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <br>
+  </div>
+  <strong class="text-danger" [hidden]="!error">{{messageError.message}}</strong>

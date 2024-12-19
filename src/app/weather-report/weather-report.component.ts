@@ -10,13 +10,13 @@ export class WeatherReportComponent {
   @Input()
   WeatherData: any = {};
   @Input()
-  showtable: boolean = true;
+  hidetable: boolean = true;
   
 
   constructor() { }
 
   toggletablevisibility($event: boolean): void {
-    this.showtable = $event;
+    this.hidetable = $event;
   }
 
 
