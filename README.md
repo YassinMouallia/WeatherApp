@@ -1,32 +1,41 @@
-<!--
-This file contains the README documentation for the WeatherApp project.
--->
 <!-- All Rights Belongs to Yassin Mouallia-->
 # WeatherApp
-WeatherApp is an Angular web application that uses the latest version of Angular (19.0.4) and Bootstrap (5.3.3).
-This web application's main function is to show the user the user the current weather given the user input(eg : London,Cairo,Tunis...) using the Open Weather API (more information here: https://openweathermap.org/current)
 
+This is an Angular web application that uses the latest version of Angular (19.0.4) and Bootstrap (5.3.3).
+This web application's main function is to show the user the current weather given the user input(eg : London,Cairo,Tunis...) using the Open Weather API (more information here: https://openweathermap.org/current)
+and displays the following information to the user:
 
-and displays the following information to the User:
-```bash
-+ Current Weather
-+ Weather Description
-+ The Current Temperature
-+ Humidity
-+ Wind speed
+## WeatherReport
+```
++ The date of the report or the time where the weather info was collected (not to be confused with the time this report was generated on the website)
++ The current weather (Clear,Drizzle,Rain,Snow etc...)
++ The cloud coverage (eg : 50%)
++ The current temperature 
++ Humidity 
++ Wind speed 
 + Wind direction
-+ Pressure
++ Atmospheric pressure
 + The time of sunrise
 + The time of sunset
 ```
+## Unit of Mesurement 
+The user can also choose the unit of measurement for the weather information. The available options are:
+```
++ Imperial
++ Metric
++ Standard
+```
 
+## Functionality
+```
+ 
+- The user is presented with an interface containing a search bar and an options menu for selecting the unit of measurement.
+- The user enters the desired city name and selects the preferred unit of measurement.
+- The user clicks the search button to retrieve the weather information.
+- The Angular application fetches data from the OpenWeather API using the provided city name and unit of measurement.
+- The application displays a table with the weather data to the user.
 
-
-
-
-
-
-
+```
 
 ## Development server
 

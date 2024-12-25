@@ -1,9 +1,9 @@
 
 <div class="container rounded d-flex align-items-center justify-content-center" style="height: 100vh;"> 
 <div class="card d-flex align-items-center justify-content-end bg-dark bg-black bg-gradient p-3" style="border:5px solid rgb(0, 37, 123)">
-            <h1 class="text-center p-3 fw-bold text-light">WeatherApp <i class="fa-solid fa-cloud-sun"></i></h1>
+      <h1 class="text-center p-3 fw-bold text-light">WeatherApp <i class="fa-solid fa-cloud-sun"></i></h1>
 
-      <search (emmiter)="ReceiveWeatherReport($event)" [messageError]="Messageerror" [error]="emitEvent"> </search>
+      <search (emmiter)="ReceiveWeatherReport($event)" [messageError]="Messageerror" [error]="emitEvent"></search>
       <app-weather-report [WeatherData]="WeatherData" [hidetable]="hidetable"></app-weather-report>    
       <app-footer></app-footer>
 </div>

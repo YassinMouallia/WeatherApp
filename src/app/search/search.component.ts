@@ -11,8 +11,10 @@ import { CommonModule } from '@angular/common';
 })
 export class SearchComponent {
   public cityName: string = '';
+  Units: string[]=["metric","imperial","standard"];
+  selectedUnit='metric';
   @Output()
-  emmiter = new EventEmitter<string>();
+  emmiter = new EventEmitter<string[]>();
   @Input()
   error: boolean = false;
   @Input()
@@ -21,9 +23,9 @@ export class SearchComponent {
     code: ''
   };
   constructor() { }
-
+  // This function validates the city name with length of the cityName variable and sends it to the parent component
   Validation() {
-    if (this.cityName.length > 4) {
+    if (this.cityName.length > 3) {
       this.SendCityName();
     } else {
       this.error = true;
@@ -32,6 +34,8 @@ export class SearchComponent {
   }
 
   SendCityName(): void {
-    this.emmiter.emit(this.cityName);
+    this.emmiter.emit([this.cityName, this.selectedUnit]);
+    
   }
+
 }

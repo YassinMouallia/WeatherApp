@@ -1,6 +1,29 @@
-<div class="col-lg-10 d-flex justify-content-center">
-    <input type="text" class="form-control" placeholder="Enter city name..." [(ngModel)]="cityName">
-    <button class="btn btn-primary" (click)="Validation()"><i class="fa-solid fa-magnifying-glass"></i></button>
-    <br>
+<div class="col">
+<div class="d-flex justify-content-center align-items-center">
+  <div class="row">
+  <label class="text-light">City name:</label>
+    <div class="d-flex justify-content-center align-items-center">
+      <input type="text" class="form-control" placeholder="Enter city name..." [(ngModel)]="cityName">
+      <button class="btn btn-primary" (click)="Validation()"><i class="fa-solid fa-magnifying-glass"></i>
+      </button> 
+    </div> 
+  
   </div>
-  <strong class="text-danger" [hidden]="!error">{{messageError.message}}</strong>
+  
+  
+  <br>
+  <div class ="row p-5">
+    <label class="text-light ps-0">Select unit:</label>
+
+    <select class=" form-select d-flex justify-content-center align-content-center" [(ngModel)]="selectedUnit">
+      <option *ngFor="let unit of Units" [value]="unit">{{unit}}</option>
+    </select>
+    
+  </div>
+
+</div>
+<div [hidden]="!error" class="d-flex justify-content-center align-items-center">
+  <strong class="text-danger text-center">{{messageError.message}}</strong>
+</div>
+</div>
+

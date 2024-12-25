@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input,SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-weather-report',
@@ -13,6 +13,7 @@ export class WeatherReportComponent {
   hidetable: boolean = true;
   
 
+  
   constructor() { }
 
   toggletablevisibility($event: boolean): void {

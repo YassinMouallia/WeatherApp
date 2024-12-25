@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +11,11 @@ export class WeatherReportService {
 
   constructor(private http: HttpClient) { }
   
-  fetchData(city: string) {
-    return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.API_KEY}&units=metric`, { responseType: 'json' })
+fetchData(request: string[]):Observable<any> {
+  const city = request[0];
+  const unit = request[1];
+
+    return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.API_KEY}&units=${unit}`, { responseType: 'json' })
       .pipe(
         catchError((error: HttpErrorResponse) => {
           console.error('Error fetching weather data', error);
