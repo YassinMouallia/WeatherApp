@@ -19,11 +19,15 @@
       <option *ngFor="let unit of Units" [value]="unit">{{unit}}</option>
     </select>
     
+    
   </div>
 
 </div>
-<div [hidden]="!error" class="d-flex justify-content-center align-items-center">
-  <strong class="text-danger text-center">{{messageError.message}}</strong>
+<div class [hidden]="!error" >
+  <div class="alert alert-danger d-flex align-items-center justify-content-center" role="alert">
+    <i class="bi bi-exclamation-triangle"></i>
+    <b class="ms-2">Error: {{messageError.message}}</b>
+  </div>
 </div>
 </div>
 
