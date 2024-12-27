@@ -29,7 +29,7 @@ export class SearchComponent {
       this.SendCityName();
     } else {
       this.error = true;
-      this.messageError.message = 'Please enter a valid city name';
+      this.messageError.message = 'City name should be more than 3 characters';
     }
   }
 
