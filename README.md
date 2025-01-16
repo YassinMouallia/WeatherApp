@@ -3,6 +3,10 @@
 
 This is an Angular web application that uses the latest version of Angular (19.0.4) and Bootstrap (5.3.3).
 This web application's main function is to show the user the current weather given the user input(eg : London,Cairo,Tunis...) using the Open Weather API (more information here: https://openweathermap.org/current)
+
+> [!WARNING]
+> You have to use your own API key In order for this application to work Go to the API Section in the document for more info
+
 and displays the following information to the user:
 
 ## WeatherReport
@@ -36,6 +40,24 @@ The user can also choose the unit of measurement for the weather information. Th
 - The application displays a table with the weather data to the user.
 
 ```
+
+
+## HOW TO OBTAIN API KEY
+
+> [!NOTE]
+> for more informations, visit this link:https://openweathermap.org/api 
+-Under the Current & Forecast weather data collection pick Current Weather Data option to get your own API key
+-pick the free tier of the api and accepts the terms of services and conditions
+-in the top corner of the screen click on your username and you will get a menu on your screen 
+![Image](https://github.com/YassinMouallia/WeatherApp/blob/master/apikey.jpg.png?raw=true)
+-Copy the api key and paste in this file /src/services/weather-report.service.ts in the variable API_KEY
+example:
+
+```
+private readonly API_KEY="api_key";
+```
+
+
 
 ## Development server
 
