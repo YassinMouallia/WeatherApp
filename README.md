@@ -5,7 +5,7 @@ This is an Angular web application that uses the latest version of Angular (19.0
 This web application's main function is to show the user the current weather given the user input(eg : London,Cairo,Tunis...) using the Open Weather API (more information here: https://openweathermap.org/current)
 
 > [!WARNING]
-> You have to use your own API key In order for this application to work Go to the API Section in the document for more info
+> You have to use your own API key In order for this application to work Go to How to obtain the api key section in the document for more info
 
 and displays the following information to the user:
 
@@ -44,15 +44,19 @@ The user can also choose the unit of measurement for the weather information. Th
 
 ## HOW TO OBTAIN API KEY
 
-> [!NOTE]
-> for more informations, visit this link:https://openweathermap.org/api 
--Under the Current & Forecast weather data collection pick Current Weather Data option to get your own API key
--pick the free tier of the api and accepts the terms of services and conditions
--in the top corner of the screen click on your username and you will get a menu on your screen 
-![Image](https://github.com/YassinMouallia/WeatherApp/blob/master/apikey.jpg.png?raw=true)
--Copy the api key and paste in this file /src/services/weather-report.service.ts in the variable API_KEY
-example:
+- For more information, visit this link: [OpenWeatherMap API](https://openweathermap.org/api).  
+- Under the **Current & Forecast Weather Data** collection, select the **Current Weather Data** option to get your own API key.  
+- Choose the **Free tier** of the API and accept the terms of service and conditions.  
+- In the top-right corner of the screen, click on your **username** to open a menu.  
+- Locate the **API Key** section (refer to the image below for guidance):  
+  ![Image](https://github.com/YassinMouallia/WeatherApp/blob/master/apikey.jpg.png?raw=true)  
+- Copy the API key and paste it into the following file in your project:  
+  `/src/services/weather-report.service.ts`  
+  Assign the key to the `API_KEY` variable.
 
+
+
+example:
 ```
 private readonly API_KEY="api_key";
 ```
